@@ -104,7 +104,7 @@ footer{padding:36px 20px calc(36px + env(safe-area-inset-bottom,0px));text-align
  <p class="sub">The Official Dandiya Night of Miranda House</p>
  <div class="rule" aria-hidden="true"><i></i><i></i></div>
  <p class="date">15 OCTOBER 2026</p>
- <div class="cta"><a class="btn" href="#tiers">View sponsorship tiers</a><a class="btn g" href="#contact">Get in touch</a></div>
+ <div class="cta"><a class="btn" href="#tiers">View sponsorship tiers</a><button class="btn g" type="button" data-tier="General Enquiry">Get in touch</button></div>
  <div class="cd" id="cd" aria-label="Time until Raas" hidden></div>
  <div class="sticks" aria-hidden="true"><i class="st a"></i><i class="st b"></i></div>
 </section>
@@ -163,7 +163,7 @@ footer{padding:36px 20px calc(36px + env(safe-area-inset-bottom,0px));text-align
   <p class="lb" style="color:rgba(246,234,215,.6)">Let’s talk</p>
   <h2 class="s">Be part of Raas 2026.</h2>
   <p>Tell us which tier interests you and we’ll share the full deck and availability.</p>
-  <div class="cta" style="margin:0"><button class="btn" type="button" data-tier="General enquiry">Show interest</button><a class="btn g" href="#tiers">Back to tiers</a></div>
+  <div class="cta" style="margin:0"><button class="btn" type="button" data-tier="General Enquiry">Show interest</button><a class="btn g" href="#tiers">Back to tiers</a></div>
  </div>
 </section>
 <dialog id="dl" aria-labelledby="dh"><button class="x" type="button" id="dx" aria-label="Close">×</button>
@@ -173,7 +173,7 @@ footer{padding:36px 20px calc(36px + env(safe-area-inset-bottom,0px));text-align
 <div><label class="lb" for="fb">Brand / company</label><input type="text" id="fb" autocomplete="organization"><p class="er" id="eb" role="alert" hidden></p></div>
 <div><label class="lb" for="fp">Contact number</label><input type="tel" id="fp" inputmode="tel" placeholder="10-digit mobile number" autocomplete="tel"><p class="er" id="ep" role="alert" hidden></p></div>
 <div><label class="lb" for="fe">Email</label><input type="email" id="fe" autocomplete="email"><p class="er" id="ee" role="alert" hidden></p></div>
-<div><label class="lb" for="ft">Interested in</label><select id="ft"><option>Title Sponsor</option><option>Associate Sponsor</option><option>Stalls</option><option>General enquiry</option></select></div>
+<div><label class="lb" for="ft">Interested in</label><select id="ft"><option>Title Sponsor</option><option>Associate Sponsor</option><option>Stalls</option><option>General Enquiry</option></select></div>
 <button class="btn" type="submit" id="sbt">Submit</button></form></div>
 <div id="dthx" class="thx" hidden role="status"><p class="lb">Received</p><h3>Thank you for showing interest.</h3><p>We'll be in touch with you within 12 hours.</p><button class="btn" type="button" id="dok">Close</button></div></dialog>
 <footer class="lb">Raas · Student Union of Miranda House · 15 Oct 2026</footer>
@@ -195,7 +195,7 @@ var els=document.querySelectorAll(".rv");
 if(!rm&&"IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});els.forEach(function(e){io.observe(e)})}
 else els.forEach(function(e){e.classList.add("in")});
 /* interest form. Set action + entry ids from a Google Form to receive submissions; empty = demo mode (nothing is sent) */
-var GF={action:"",entries:{name:"",brand:"",phone:"",email:"",tier:""}};
+var GF={action:"https://docs.google.com/forms/d/e/1FAIpQLSdGuIn8bA5N9vzN_WUzF5lFbCNRmTyLfwe1tbbZ2dFvNQQzLQ/formResponse",entries:{name:"entry.1239644911",brand:"entry.434263626",phone:"entry.1745714289",email:"entry.561452303",tier:"entry.523551603"}};
 var dl=$("#dl"),sf=$("#sf"),busy=false;
 function err(id,m){var e=$("#e"+id);e.hidden=!m;e.textContent=m||""}
 function shut(){dl.close?dl.close():dl.removeAttribute("open")}
